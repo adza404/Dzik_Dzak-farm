@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Produk Kami - Dzik_Dzak Farm</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <a href="index.html">
+          <img src="image/domba.png" alt="Logo Peternakan" class="logo" />
+        </a>
+        <h1>Dzik_Dzak Farm</h1>
+      </div>
+      <nav>
+        <ul>
+          <li><a href="index.html">Beranda</a></li>
+          <li><a href="produk.html" class="active">Produk</a></li>
+          <li><a href="index.html#kontak">Kontak</a></li>
+        </ul>
+        <div class="search-container">
+          <input type="text" id="cari-produk" placeholder="Cari NIK atau Deskripsi...">
+        </div>
+      </nav>
+    </header>
+
+    <main>
+
+        <h2>Produk Kami</h2>
+        <h3>🐐 Kambing</h3>
+        <button onclick="scrollProduk(-1, 'produk-kambing')">&#10094;</button>
+        <button onclick="scrollProduk(1, 'produk-kambing')">&#10095;</button>
+
+        <div class="produk-scroll-container" id="produk-kambing">
+            <div class="produk-grid" id="daftar-produk">
+            </div>
+        </div>
+
+        <h3>🌱 Pupuk</h3>
+        <button onclick="scrollProduk(-1, 'produk-pupuk')">&#10094;</button>
+        <button onclick="scrollProduk(1, 'produk-pupuk')">&#10095;</button>
+        <div class="produk-scroll-container" id="produk-pupuk">
+            <div class="produk-grid" id="daftar-produk">
+            </div>
+        </div>
+    </main>
+
+    <div id="form-container" style="display: none;">
+        <h3>Form Pemesanan</h3>
+        <div class="form-container">
+            <form id="form-pesan" class="form-di-perut">
+                <label for="nama">Nama:</label>
+                <input type="text" id="nama" required>
+            
+                <label for="telepon">Telepon:</label>
+                <input type="tel" id="telepon" required>
+            
+                <label for="produk">Produk:</label>
+                <select id="produk" required>
+                  <option value="">-- Pilih Produk --</option>
+                  <option value="Kambing Etawa">Kambing Etawa</option>
+                  <option value="Kambing Boer">Kambing Boer</option>
+                  <option value="Pupuk Kohe Padat">Pupuk Kohe Padat</option>
+                  <option value="Pupuk Kohe Cair">Pupuk Kohe Cair</option>
+                </select>
+            
+                <label for="jumlah">Jumlah:</label>
+                <input type="number" id="jumlah" required>
+            
+                <label for="alamat">Alamat lengkap:</label>
+                <textarea id="alamat"></textarea>
+            
+                <button type="submit">Kirim</button>
+                <p id="pesan-sukses" style="display:none; color: green;">Pesan berhasil dikirim!</p>
+              </form>
+        </div>
+    </div>
+
+    <footer>
+      <p>&copy; 2025 Dzik_Dzak Farm</p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
